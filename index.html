@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Min VS Max Validation</title>
+</head>
+<body>
+    <h1>Min VS Max Validation</h1>
+    <form>
+        <input type="number" placeholder="Min" id="min">
+        <span> &lt; </span>
+        <input type="number" placeholder="Max" id="max">
+        <button type="button" onclick="validate()">Validate</button>
+    </form>
+
+    <script>
+        function validate() {
+            const min = parseFloat(document.getElementById("min").value);
+            const max = parseFloat(document.getElementById("max").value);
+
+            if (min < max) {
+                alert("Validation successful: Min is less than Max.");
+            } else {
+                alert("Validation failed: Min should be less than Max.");
+            }
+        }
+    </script>
+</body>
+</html>
